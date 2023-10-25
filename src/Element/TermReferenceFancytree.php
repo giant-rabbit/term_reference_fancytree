@@ -181,7 +181,7 @@ class TermReferenceFancytree extends FormElement {
         ->sort('weight')
         ->sort('name');
 
-      $tids = $query->execute();
+      $tids = $query->accessCheck()->execute();
 
       $terms = TermReferenceFancytree::getTermStorage()
         ->loadMultiple($tids);

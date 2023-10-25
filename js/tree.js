@@ -37,7 +37,7 @@
         if (treeSettings instanceof Array) {
           for (let i = 0; i < treeSettings.length; i++) {
             // Initialise a new Fancytree with our settings.
-            $('#' + treeSettings[i].id).once('term-reference-fancytree').each(function () {
+            $(once('term-reference-fancytree', '#' + treeSettings[i].id)).each(function () {
               new Drupal.TermReferenceFancyTree(treeSettings[i].id, treeSettings[i].name, treeSettings[i].source, treeSettings[i].select_children, treeSettings[i].selection_mode, treeSettings[i].select_parents);
 
               if (treeSettings[i].select_all) {
